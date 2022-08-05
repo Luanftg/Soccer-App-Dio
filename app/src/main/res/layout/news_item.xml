@@ -16,12 +16,12 @@
             android:id="@+id/ivThumbnail"
             android:layout_width="0dp"
             android:layout_height="@dimen/news_image_heigth"
+            android:contentDescription="@string/cd_news_image"
+            android:src="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"
-            tools:srcCompat="@tools:sample/avatars"
-            android:contentDescription="@string/cd_news_image"
-            android:src="@color/black"/>
+            tools:srcCompat="@tools:sample/avatars" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvTitle"
@@ -29,10 +29,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/activity_default_margin"
             android:layout_marginTop="@dimen/activity_default_margin"
-            tools:text="Ferroviária vence Palmeiras"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivThumbnail" />
+            app:layout_constraintTop_toBottomOf="@+id/ivThumbnail"
+            tools:text="Ferroviária vence Palmeiras" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvDescription"
@@ -54,32 +54,40 @@
             android:layout_marginStart="@dimen/activity_default_margin"
             android:layout_marginTop="@dimen/activity_default_margin"
             android:layout_marginBottom="@dimen/default_half_margin"
+            android:text="@string/txt_open_link"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDescription"
-            app:layout_constraintVertical_bias="1.0"
-            android:text="@string/txt_open_link" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/ivFavorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/activity_default_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/cd_favorite_icon"
+            android:focusable="true"
+            android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/btOpenLink"
             app:layout_constraintEnd_toStartOf="@+id/ivShare"
             app:layout_constraintTop_toTopOf="@+id/btOpenLink"
-            app:srcCompat="@drawable/ic_favorites"
-            android:contentDescription="@string/cd_favorite_icon"/>
+            app:srcCompat="@drawable/ic_favorites" />
 
         <ImageView
             android:id="@+id/ivShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/activity_default_margin"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="@string/cd_share_icon"
+            android:focusable="true"
+            android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/btOpenLink"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btOpenLink"
-            app:srcCompat="@drawable/ic_share"
-            android:contentDescription="@string/cd_share_icon"/>
+            app:srcCompat="@drawable/ic_share" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
