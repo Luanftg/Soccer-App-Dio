@@ -38,7 +38,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.binding.tvDescription.setText(news.getDescription());
         Picasso.get().load(news.getImage()).fit().into(holder.binding.ivThumbnail);
         holder.binding.btOpenLink.setOnClickListener(view -> {
-            String url = "http://www.example.com";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(news.getLink()));
             holder.itemView.getContext().startActivity(i);
