@@ -26,3 +26,5 @@
 - [Retrofit](https://square.github.io/retrofit/)
 - [`use permisson`](https://developer.android.com/training/basics/network-ops/connecting?hl=pt-br)
 - [Picasso-Square](https://github.com/square/picasso)
+- [Funcionalidade de Compartilhar - Intent Nativa Android](https://stackoverflow.com/questions/9948373/android-share-plain-text-using-intent-to-all-messaging-apps)
+- [Room - Persistencia de dados localmente](https://developer.android.com/training/data-storage/room)
